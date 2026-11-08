@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FNBSLW 444 Case Study 2</title>
+<style>
+:root{--pur:#7A4FA8;--purd:#5B2E83;--grn:#1E8A6E;--ink:#1b1b1b;--ink2:#4a4a4a;--mut:#8a8a8a;--line:#e4e1e9;--bg:#faf9fb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Segoe UI",Arial,Helvetica,sans-serif}
+.hero{background:linear-gradient(135deg,#5B2E83,#7A4FA8);color:#fff;padding:52px 20px 44px}
+.hero .in{max-width:980px;margin:0 auto}
+.hero .kick{font-size:13px;letter-spacing:2.2px;text-transform:uppercase;opacity:.85}
+.hero h1{margin:10px 0 12px;font-size:36px;line-height:1.2}
+.hero p{margin:0;font-size:17px;opacity:.93;max-width:760px}
+.meta{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px}
+.meta span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);padding:6px 13px;border-radius:20px;font-size:13.5px}
+nav{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:30;box-shadow:0 1px 6px rgba(0,0,0,.05)}
+nav .in{max-width:980px;margin:0 auto;display:flex;flex-wrap:wrap;gap:4px;padding:0 20px}
+nav a{padding:13px 13px;font-size:14px;color:var(--ink2);text-decoration:none;border-bottom:3px solid transparent}
+nav a:hover{color:var(--purd);border-bottom-color:var(--pur)}
+main{max-width:980px;margin:0 auto;padding:12px 20px 60px}
+section{padding:34px 0;border-bottom:1px solid var(--line)}
+h2{font-size:26px;color:var(--purd);margin:0 0 6px}
+.sub{color:var(--mut);font-size:14px;margin:0 0 18px}
+h3{font-size:18px;margin:24px 0 8px}
+p{margin:0 0 13px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:14px 0}
+.q{background:#fff;border:1px solid var(--line);border-left:4px solid var(--pur);border-radius:0 10px 10px 0;padding:14px 18px;margin:11px 0;cursor:pointer;transition:.12s;position:relative}
+.q:hover{box-shadow:0 2px 12px rgba(90,46,131,.13);border-left-color:var(--grn)}
+.q b{color:var(--purd)}
+.q .more{display:none;margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);color:var(--ink2);font-size:14.5px}
+.q.open .more{display:block}
+.q::after{content:"+";position:absolute;right:16px;top:13px;color:var(--pur);font-size:19px;font-weight:700}
+.q.open::after{content:"\2212"}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+table{border-collapse:collapse;width:100%;font-size:14.5px;margin:10px 0}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+th{background:var(--purd);color:#fff;font-weight:600}
+tr:nth-child(even) td{background:#faf8fc}
+.f{font-family:"Cambria Math",Georgia,serif;background:#f6f4f9;border-left:3px solid var(--pur);padding:10px 14px;border-radius:0 7px 7px 0;margin:9px 0;font-size:16px}
+.pill{display:inline-block;background:#f0e9f6;color:var(--purd);padding:3px 11px;border-radius:14px;font-size:12.5px;font-weight:600;margin-right:6px}
+.btn{display:inline-block;background:var(--purd);color:#fff;text-decoration:none;padding:12px 22px;border-radius:9px;font-weight:600;margin:6px 8px 6px 0}
+.btn:hover{background:var(--pur)}.btn.alt{background:#fff;color:var(--purd);border:2px solid var(--purd)}
+.note{background:#eef6f3;border-left:4px solid var(--grn);padding:13px 17px;border-radius:0 9px 9px 0;margin:14px 0;font-size:15px}
+.warnbox{background:#fdf3e8;border-left:4px solid #C87A28;padding:13px 17px;border-radius:0 9px 9px 0;margin:14px 0;font-size:15px}
+footer{background:#2b2333;color:#cfc6d8;padding:26px 20px;font-size:13.5px}
+footer .in{max-width:980px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+.dashbox{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;margin:16px 0;box-shadow:0 2px 14px rgba(90,46,131,.10)}
+.dashbox iframe{display:block;width:100%;height:1180px;border:0}
+@media(max-width:760px){.dashbox iframe{height:1900px}}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}.hero h1{font-size:28px}}
+@media print{nav{position:static}.q .more{display:block}}
+</style></head><body>
+<div class="hero"><div class="in">
+<div class="kick">FNBSLW 444 &middot; Corporate Financial Management Decisions</div>
+<h1>Case Study 2: Capital Structure, Valuation, and Acquisition Analysis</h1>
+<p>Stanley Black &amp; Decker, Inc. (NYSE: SWK). You will work out how the company is financed, decide what it is worth, and judge whether your firm should buy it. Then you present your answer from a live dashboard.</p>
+<div class="meta"><span>Worth 25% of the course grade</span><span>Teams of up to three</span><span>Report, workbook, dashboard, AI log</span><span>Presented in class</span></div>
+</div></div>
+<nav><div class="in">
+<a href="#why">Why this case</a><a href="#situation">The situation</a><a href="#data">Data rules</a>
+<a href="#a">Part A</a><a href="#b">Part B</a><a href="#c">Part C</a>
+<a href="#submit">What to submit</a><a href="#present">The presentation</a><a href="#dash">Dashboard</a><a href="#formulas">Formulas</a>
+</div></nav>
+<main>
+
+<section id="why"><h2>Why this case</h2>
+<p class="sub">What you are actually learning</p>
+<p>In the first case you worked out the cost of capital for a single project. This time you take on a whole company, and you do it the way an analyst actually does: starting from the filings, building a model, and ending with a recommendation you have to defend out loud.</p>
+<div class="grid2">
+<div class="card"><h3 style="margin-top:0">Three questions, one thread</h3>
+<p style="margin:0">How is this company financed and what does that cost? What is it worth? Should we buy it? Each answer feeds the next. The discount rate you build in Part A is the rate you value with in Part B and the rate you price synergies with in Part C. Get Part A wrong and everything downstream moves.</p></div>
+<div class="card"><h3 style="margin-top:0">Real data, real judgment</h3>
+<p style="margin:0">Every input comes from an SEC filing, a bond quote page, or a published rate. Nothing is handed to you except the projection assumptions, and you test those. The grade is not for arithmetic. It is for whether your conclusion survives questions.</p></div>
+</div>
+<div class="note"><b>Before you start.</b> We work the whole method together in class on a different company first. Bring that worked example with you; the steps are identical.</div>
+</section>
+
+<section id="situation"><h2>The situation</h2>
+<p class="sub">Who you are and what the board wants</p>
+<p>Stanley Black &amp; Decker makes hand tools, power tools, and outdoor equipment under the DeWalt, Stanley, Craftsman, and Black+Decker brands, and sells engineered fastening systems to automotive and aerospace customers. It is headquartered in New Britain, Connecticut, has paid a dividend every year since 1877, and carries a BBB investment-grade credit rating. It uses debt in a meaningful way, and its capital structure is yours to uncover from its filings. Net sales have declined in recent years, and management is running a multi-year cost-reduction program it says will rebuild the operating margin. Tariff costs on imported products are the main open question for 2026.</p>
+<p>Your team works in the corporate development group of a large industrial company. The board has asked you for three things, and they belong together.</p>
+<div class="q" onclick="tg(this)"><b>1. How is SWK financed, and what would more leverage do?</b>
+<div class="more">Build the market value balance sheet, estimate the cost of equity, the cost of debt, the WACC, and the unlevered cost of capital. Then value a $1,000 million expansion and work out whether financing it with equity or with debt leaves shareholders better off, and by how much per share. Finish with the uncomfortable case: a project that creates value for the firm but is voted down because the lenders capture too much of it.</div></div>
+<div class="q" onclick="tg(this)"><b>2. What is the company worth?</b>
+<div class="more">Project five years of cash flow from assets on the assumptions given, value the firm twice (once at the WACC and once by APV), and test how much the answer moves when the margin and the discount rate change. Then say plainly whether the stock is cheap, fair, or expensive, and what would have to be true for the market to be right instead of you.</div></div>
+<div class="q" onclick="tg(this)"><b>3. Should we buy it, and at what price?</b>
+<div class="more">Value the synergies, work out the maximum price you could justify, and compare it with the offer on the table. Then decide. The interesting number is not the deal NPV; it is how much of the synergy value the premium hands to the target's shareholders before your firm sees a cent.</div></div>
+<p>Every team values the same company from the same filings, so the results are comparable and are graded against one answer key with acceptable ranges for live market data. What differs across teams is the quality of the judgment.</p>
+</section>
+
+<section id="data"><h2>Data rules</h2>
+<p class="sub">Read this before you open Excel</p>
+<div class="q" onclick="tg(this)"><b>Filings</b>
+<div class="more">Use the most recent Form 10-Q for the balance-sheet numbers and the most recent Form 10-K for the three-year history, the long-term debt schedule, and the cash flow statement. Both are on sec.gov under Stanley Black &amp; Decker, CIK 93556. Name the filings you used, with their filing dates, in the report.<br><br><b>Watch the current maturities line.</b> The figure in the 10-K is much larger than the one in the 10-Q because notes were repaid in between. Using the wrong one is the single most common error in this case.</div></div>
+<div class="q" onclick="tg(this)"><b>Market data and your data date</b>
+<div class="more">Pick one data date and use it for everything. Collect the share price, shares outstanding, beta, dividend, the bond quotes, and the 3-month Treasury yield as of that date. State the date in the report and keep a dated screenshot of every page in the appendix.<br><br>Price, shares, beta, dividend: Yahoo Finance or stockanalysis.com. Bond prices and yields: FINRA, Corporate and Agency Bonds, issuer "Stanley Black", recording the trade date shown, because a note may not trade every day. If FINRA shows no trade in the prior five business days, use the TradingView SWK bonds page and say so. A small issue with no quote at all is carried at par with the yield of the nearest quoted maturity, and you state that. The 3-month yield comes from the Daily Treasury Par Yield Curve at home.treasury.gov.</div></div>
+<div class="q" onclick="tg(this)"><b>Conventions</b>
+<div class="more">Risk-free rate is the 3-month Treasury yield. The equity risk premium is the current implied premium from Aswath Damodaran's page at pages.stern.nyu.edu/~adamodar, stated as of your data date. Tax rate is the 21 percent federal statutory rate. Use the published five-year beta.<br><br>SWK's income statement has no operating profit line, so build EBIT as earnings before income taxes plus interest expense. Take depreciation and amortization as depreciation of property, plant and equipment plus amortization of intangibles from the cash flow statement.</div></div>
+<div class="q" onclick="tg(this)"><b>Using AI, and the one rule that matters</b>
+<div class="more">AI is required on this case study. Use it where an analyst would: finding items in the filings, drafting assumptions you then test, checking a formula, stress-testing your recommendation, building your dashboard, editing your writing.<br><br><b>AI output is never a source.</b> When a tool gives you a number, open the filing or the quote page, find it yourself, screenshot it, and only then type it into your workbook. Where the two disagree, the filing wins, and that disagreement belongs in your AI Use Log. Full credit on the log requires at least one case where you caught an AI mistake and corrected it.</div></div>
+<div class="warnbox"><b>Everything traces to a cell.</b> Build the model in the posted Excel template. Blue cells are inputs you retrieve. Yellow cells are formulas you write. If a number appears in your report, in your dashboard, or in your presentation, it must come from a cell in that workbook.</div>
+</section>
+
+<section id="a"><h2>Part A. Capital structure and a leveraged expansion</h2>
+<p class="sub">Six questions</p>
+<div class="q" onclick="tg(this)"><b>1. Read the balance sheet and list every note</b><div class="more">From the 10-Q balance sheet, record cash, total current assets, total current liabilities, long-term debt, notes payable and current maturities of long-term debt, and total shareholders' equity. From the 10-K debt schedule, list every note still outstanding on your data date with its coupon, maturity, and face amount, and treat the current maturities and other debt as one line at par. Then compute the book value of total debt and the book debt-to-equity ratio.<br><br>This is the part people rush. Every later number depends on getting the debt list right.</div></div><div class="q" onclick="tg(this)"><b>2. Build the market value balance sheet</b><div class="more">Report the market value of equity, the market value of debt, firm value, the weight of debt, the weight of equity, and the market debt-to-equity ratio. Compare it with the book ratio in one paragraph.<br><br>The comparison is the point. Book equity is historical cost; market equity is what the business is actually worth today. Any claim about how levered this company is has to be made on market values.</div></div><div class="q" onclick="tg(this)"><b>3. Find the cost of capital, then strip the leverage out of it</b><div class="more">Estimate the cost of equity, the pre-tax and after-tax cost of debt, and the WACC on market-value weights. From these, recover the unlevered cost of capital R_0.<br><br>Then write the paragraph that matters: what drives the WACC, separating business risk from the use of debt and the tax shield, and why a lower WACC does not by itself make a company the better investment. A firm can lower its reported WACC by borrowing more without becoming one bit better at making tools.</div></div><div class="q" onclick="tg(this)"><b>4. Value a $1,000 million expansion, two ways</b><div class="more">Management is weighing an expansion of the DeWalt professional line and the North American manufacturing footprint. It costs $1,000 million and is expected to raise pretax operating earnings by $130 million a year in perpetuity, at the same business risk as the firm.<br><br>(a) Find the NPV. (b) If it is financed with new equity, show the market value balance sheet after the announcement and report the new price per share and the number of shares to be issued. (c) If it is financed entirely with new perpetual debt, show the balance sheet including the interest tax shield and report the price per share. (d) State which financing gives the higher share price and by how much.<br><br>Two traps live here. The project is valued before its financing is chosen, and the new shares are sold after the market has already reacted to the announcement.</div></div><div class="q" onclick="tg(this)"><b>5. Work out how far the debt should go</b><div class="more">After the debt-financed expansion, report the debt-to-equity ratio, the cost of equity, and the WACC, and explain why the cost of equity is higher than under all-equity financing.<br><br>Then, in one paragraph, use the costs of financial distress and the agency costs of debt to explain what actually limits SWK's borrowing, and say whether the company looks over-levered or under-levered today. Either verdict earns full marks if you argue it from the numbers and from the business.</div></div><div class="q" onclick="tg(this)"><b>6. When a good project still gets voted down</b><div class="more">Suppose the expansion goes ahead and, because it makes the existing notes safer, the current lenders capture $300 million of the value created without putting in any new money. What NPV is left for the shareholders, and would they still approve it?<br><br>Then explain in one short paragraph why the split of value between lenders and shareholders, not the project NPV alone, decides the vote. This is the agency cost of debt in its clearest form.</div></div>
+</section>
+
+<section id="b"><h2>Part B. What is SWK worth</h2>
+<p class="sub">Five questions, one verdict</p>
+<p>Project five years of cash flow from assets from the most recent fiscal-year base, using the assumptions below. Every team uses the same set. These are given in the case, and you test them in the sensitivity analysis.</p>
+<table><tr><th>Assumption</th><th>Base case</th></tr>
+<tr><td>Net sales growth, years 1 to 5</td><td>2.0% per year</td></tr>
+<tr><td>Operating margin (EBIT proxy / net sales)</td><td>10%</td></tr>
+<tr><td>Depreciation and amortization</td><td>3.4% of sales</td></tr>
+<tr><td>Capital expenditures</td><td>1.9% of sales</td></tr>
+<tr><td>Investment in net working capital</td><td>15% of the change in sales</td></tr>
+<tr><td>Terminal growth after year 5</td><td>2.0%</td></tr>
+<tr><td>Tax rate</td><td>21%</td></tr></table>
+<div class="q" onclick="tg(this)"><b>7. Build five years of cash flow from assets</b><div class="more">Start from EBIT, take out tax, add back depreciation and amortization, then subtract what the firm spends on equipment and on working capital. What is left is the cash the business can hand to everyone who financed it.<br><br><span class='pill'>Formula</span> CFA = EBIT &times; (1 &minus; T) + D&amp;A &minus; CapEx &minus; change in NWC</div></div><div class="q" onclick="tg(this)"><b>8. Value the firm with the WACC method</b><div class="more">Discount the five flows and a terminal value at your WACC, move from enterprise value to equity value, and report the value per share against the market price on your data date.<br><br><span class='pill'>Formula</span> TV&#8325; = CFA&#8325;(1 + g) / (WACC &minus; g), then Equity = EV + cash &minus; debt</div></div><div class="q" onclick="tg(this)"><b>9. Value it again with APV, and explain the gap</b><div class="more">Discount the same cash flows at R_0 to get the value with no leverage, then add the tax shield on the existing debt separately. Report the value per share.<br><br>In one paragraph, say why the two methods differ a little and which assumption drives the gap. The WACC method assumes the capital structure stays at today's proportions forever; APV holds the dollar amount of debt fixed. For a lightly levered firm they barely disagree. For a heavily levered one they can.</div></div><div class="q" onclick="tg(this)"><b>10. Test the assumptions</b><div class="more">Build a 3 by 3 table of value per share, varying the operating margin across 8, 10, and 12 percent and the WACC one point below, at, and one point above your estimate.<br><br>Then read it: what does the market price imply about the margin and the discount rate investors are using? The grid usually shows that a point on the discount rate moves the answer more than two points of margin, which tells you where to spend your attention.</div></div><div class="q" onclick="tg(this)"><b>11. Give the verdict</b><div class="more">State SWK's fair value per share, compare it with the market price, and say whether the stock is cheap, fair, or expensive.<br><br>Then do the hard part: say what would have to be true about SWK for the market price to be right instead of your model. A team that declares the stock undervalued without confronting that question has not finished the analysis.</div></div>
+</section>
+
+<section id="c"><h2>Part C. The acquisition</h2>
+<p class="sub">Four questions</p>
+<p>Your company is evaluating an all-cash acquisition of SWK at a premium of 30 percent over the market price on your data date. Your operating team believes the combination would produce pretax synergies of $400 million a year, starting in year 1 and growing at the terminal rate, from savings in overlapping industrial distribution, procurement, and overhead. The premium and the synergies are assumptions given for the analysis, not estimates of what your company would actually pay.</p>
+<div class="q" onclick="tg(this)"><b>12. Price the offer</b><div class="more">Find the offer price per share and the total cost of the deal. Treat SWK's standalone value to its own shareholders as its market value of equity on your data date, and report your Part B value beside it for comparison.<br><br>An acquirer has to pay the market for the shares whatever its own model says, which is why the market value, not your DCF, is the base the premium sits on.</div></div><div class="q" onclick="tg(this)"><b>13. Value the synergies and find your ceiling</b><div class="more">Value the synergies to your company, add them to SWK's standalone value, and report the maximum price per share you could justify and the maximum premium that implies.<br><br><span class='pill'>Formula</span> PV of synergies = after-tax synergy / (WACC &minus; g); maximum price = (target equity + PV of synergies) / shares<br><br>Notice what the perpetuity assumes: that the savings are permanent and begin immediately. Neither is usually true.</div></div><div class="q" onclick="tg(this)"><b>14. Decide, then look at who actually wins</b><div class="more">Find the NPV of the deal at the offered premium and say whether your company should proceed.<br><br>Then compute how much of the synergy value the 30 percent premium hands to SWK's shareholders. That number is usually the most revealing one in the whole case: the premium is paid up front and with certainty, while the synergies arrive later and only if your management executes.</div></div><div class="q" onclick="tg(this)"><b>15. Write the recommendation</b><div class="more">Proceed, proceed at a lower premium (state it), or walk away. Say who bears the risk that the synergies do not appear, and why a cash offer puts that risk where it does. Two to three paragraphs, in your own words.<br><br>Close with one paragraph of limitations: integration cost and the time synergies take to arrive, antitrust review, how a deal of this size would be financed and what it would do to your company's own credit rating, and the assumption of SWK's debt. State these. Do not model them.</div></div>
+</section>
+
+<section id="submit"><h2>What to submit</h2>
+<p class="sub">One submission per team, through CANVAS, by the due date</p>
+<table><tr><th>Item</th><th>What it is</th></tr>
+<tr><td><b>Report</b></td><td>4 to 8 pages of analysis plus a first page, appendix and references, as Word or PDF, in the layout of the writing model posted in CANVAS. First page carries the title, the deal rating, the team members with emails, and the executive summary. Then Analysis in the order Part A, Part B, Part C, then Conclusion, Appendix, References.</td></tr>
+<tr><td><b>Excel workbook</b></td><td>Built from the posted template, with live formulas, not typed values.</td></tr>
+<tr><td><b>Dashboard</b></td><td>A single HTML file built from the posted template with your numbers filled in.</td></tr>
+<tr><td><b>AI Use Log</b></td><td>A separate file, one per team, with verbatim prompts and real verification.</td></tr></table>
+<div class="note"><b>There are no written checkpoints in this case study.</b> The check on your work is the presentation, and it is live.</div>
+</section>
+
+<section id="present"><h2>The presentation</h2>
+<p class="sub">Eight minutes, from your dashboard, not from slides</p>
+<p>Every team presents in class. You open your dashboard, walk the room through the headline numbers, and give your recommendation. When you are asked about a figure, you click it, and the breakdown behind it appears on the screen. That is the whole point of the format: you should never be in a position where a number on your screen is one you cannot explain.</p>
+<div class="grid2">
+<div class="card"><h3 style="margin-top:0">How to use the eight minutes</h3>
+<p style="margin:0">Roughly two minutes on how the company is financed and what its cost of capital is, two on what it is worth and why, two on the deal and your ceiling, and two on your recommendation and the risk that would change your mind. Do not read the dashboard aloud. Explain what it means.</p></div>
+<div class="card"><h3 style="margin-top:0">Expect questions on any number</h3>
+<p style="margin:0">Questions go to whichever team member is standing there, not to the one who built that sheet. Everyone should be able to say where a figure came from, what it assumes, and what happens to the recommendation if the assumption is wrong.</p></div>
+</div>
+<p style="margin-top:20px"><a class="btn" href="#dash">See the demonstration dashboard</a></p>
+<p style="font-size:14px;color:var(--mut)">The demonstration dashboard is at the bottom of this page, built on the company we work in class. Click any tile, bar, or table cell and the breakdown behind that number opens. Yours will look the same with your own figures. The blank template you fill in is a separate file in CANVAS.</p>
+</section>
+
+
+<section id="dash"><h2>The demonstration dashboard</h2>
+<p class="sub">This is what you present from. Click anything in it.</p>
+<p>Every tile, every bar, and every cell in the sensitivity table is clickable. Clicking opens the formula in words, the inputs that went into it, the arithmetic, and one line on what the number means. That is how you answer a question in the presentation: you click the number you are asked about.</p>
+<div class="dashbox"><iframe title="Demonstration dashboard" srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;title&gt;Snap-on demonstration dashboard&lt;/title&gt;
+&lt;style&gt;
+:root{--pur:#7A4FA8;--purd:#5B2E83;--grn:#1E8A6E;--ink:#1b1b1b;--ink2:#555;--mut:#8a8a8a;--line:#e3e0e8;--bg:#faf9fb;--card:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 &quot;Segoe UI&quot;,Arial,Helvetica,sans-serif}
+.wrap{max-width:1240px;margin:0 auto;padding:22px 18px 40px}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px;border-bottom:3px solid var(--purd);padding-bottom:12px;margin-bottom:8px}
+h1{margin:0;font-size:25px;color:var(--purd)}h1 small{display:block;font-size:13.5px;color:var(--ink2);font-weight:400;margin-top:5px}
+.rating .tag{display:inline-block;background:var(--grn);color:#fff;font-weight:700;padding:7px 16px;border-radius:7px;font-size:18px;letter-spacing:.5px}
+.rating .tag.walk{background:#8a8a8a}.rating div{font-size:12.5px;color:var(--ink2);margin-top:5px;text-align:right}
+.hint{font-size:12.5px;color:var(--ink2);margin:10px 0 14px;padding:7px 12px;background:#f3eef8;border-left:3px solid var(--pur);border-radius:0 6px 6px 0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;cursor:pointer;transition:.12s;position:relative;text-align:left;font:inherit;width:100%}
+.tile:hover,.tile:focus{border-color:var(--pur);box-shadow:0 2px 10px rgba(90,46,131,.14);outline:none;transform:translateY(-1px)}
+.tile .l{font-size:11.5px;color:var(--ink2);text-transform:uppercase;letter-spacing:.4px}
+.tile .v{font-size:26px;font-weight:700;color:var(--purd);margin-top:2px}
+.tile .s{font-size:11.5px;color:var(--mut);margin-top:3px}
+.tile::after{content:&quot;\25F3&quot;;position:absolute;top:9px;right:10px;font-size:10px;color:#c9c2d4}
+.charts{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.card h2{margin:0 0 7px;font-size:14px;color:var(--ink)}.card p{margin:6px 0 0;font-size:11.5px;color:var(--ink2)}
+svg{width:100%;height:auto;display:block}
+.bar{fill:var(--pur);cursor:pointer}.bar2{fill:var(--grn);cursor:pointer}
+.bar:hover,.bar2:hover{opacity:.78}
+.lbl{font-size:11px;fill:var(--ink2)}.val{font-size:11.5px;fill:var(--ink);font-weight:600}
+.axis{stroke:var(--line);stroke-width:1}
+.legend{font-size:11.5px;color:var(--ink2);margin-top:5px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin:0 4px 0 10px;vertical-align:middle}
+table{border-collapse:collapse;width:100%;font-size:12px;margin-top:6px}
+th,td{border:1px solid var(--line);padding:5px 6px;text-align:right}th:first-child,td:first-child{text-align:left}
+th{background:#f3eef8;color:var(--ink)}
+td.s{cursor:pointer}td.s:hover{outline:2px solid var(--pur);outline-offset:-2px}
+#ov{position:fixed;inset:0;background:rgba(25,18,33,.5);display:none;align-items:center;justify-content:center;padding:20px;z-index:50}
+#ov.on{display:flex}
+#pan{background:#fff;border-radius:12px;max-width:640px;width:100%;max-height:86vh;overflow:auto;padding:22px 24px;box-shadow:0 18px 50px rgba(0,0,0,.3)}
+#pan h3{margin:0 0 3px;font-size:19px;color:var(--purd)}
+#pan .big{font-size:30px;font-weight:700;color:var(--ink);margin:2px 0 12px}
+#pan .sec{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--mut);margin:16px 0 5px;font-weight:700}
+#pan .f{font-family:&quot;Cambria Math&quot;,Georgia,serif;font-size:15px;background:#f7f5fa;border-left:3px solid var(--pur);padding:9px 12px;border-radius:0 6px 6px 0}
+#pan table{font-size:13px}#pan td,#pan th{padding:5px 8px}
+#pan .mean{background:#eef6f3;border-left:3px solid var(--grn);padding:10px 12px;border-radius:0 6px 6px 0;font-size:13.5px;margin-top:6px}
+#pan .cls{float:right;border:1px solid var(--line);background:#fff;border-radius:6px;padding:4px 11px;cursor:pointer;font-size:13px;color:var(--ink2)}
+#pan .cls:hover{border-color:var(--pur);color:var(--purd)}
+footer{margin-top:18px;font-size:11px;color:var(--mut);display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;border-top:1px solid var(--line);padding-top:10px}
+.warn{background:#fdecea;color:#8a1c12;border:1px solid #e0a9a3;padding:9px 13px;border-radius:8px;margin:0 0 13px;font-size:13px}
+@media(max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}.charts{grid-template-columns:1fr}}
+@media print{body{background:#fff}#ov{display:none!important}.tile::after{display:none}.hint{display:none}}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class=&quot;wrap&quot;&gt;
+&lt;header&gt;&lt;h1 id=&quot;ttl&quot;&gt;Dashboard&lt;small id=&quot;sub&quot;&gt;&lt;/small&gt;&lt;/h1&gt;
+&lt;div class=&quot;rating&quot;&gt;&lt;span class=&quot;tag&quot; id=&quot;rat&quot;&gt;&lt;/span&gt;&lt;div id=&quot;ratn&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/header&gt;
+&lt;div class=&quot;hint&quot;&gt;Click any figure, bar, or table cell to see exactly how it was built. Press Escape to close.&lt;/div&gt;
+&lt;div class=&quot;grid&quot; id=&quot;tiles&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;charts&quot;&gt;
+ &lt;div class=&quot;card&quot;&gt;&lt;h2&gt;Value per share: our methods, the market, the offer, and the ceiling&lt;/h2&gt;&lt;div id=&quot;c1&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;legend&quot;&gt;&lt;i style=&quot;background:var(--pur)&quot;&gt;&lt;/i&gt;Standalone value &lt;i style=&quot;background:var(--grn)&quot;&gt;&lt;/i&gt;Deal prices&lt;/div&gt;
+  &lt;p&gt;Click a bar for its breakdown.&lt;/p&gt;&lt;/div&gt;
+ &lt;div class=&quot;card&quot;&gt;&lt;h2&gt;Cash flow from assets, $ millions&lt;/h2&gt;&lt;div id=&quot;c2&quot;&gt;&lt;/div&gt;&lt;p id=&quot;c2n&quot;&gt;&lt;/p&gt;&lt;/div&gt;
+ &lt;div class=&quot;card&quot;&gt;&lt;h2&gt;Value per share sensitivity&lt;/h2&gt;&lt;div id=&quot;c3&quot;&gt;&lt;/div&gt;
+  &lt;p&gt;Operating margin down the side, WACC across the top. Green where the value is at or above the market price.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;footer&gt;&lt;span id=&quot;f1&quot;&gt;&lt;/span&gt;&lt;span id=&quot;f2&quot;&gt;&lt;/span&gt;&lt;/footer&gt;
+&lt;/div&gt;
+&lt;div id=&quot;ov&quot;&gt;&lt;div id=&quot;pan&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;script&gt;
+// ===== EDIT THIS BLOCK WITH YOUR TEAM&#x27;S NUMBERS (from the Dashboard Data sheet of your workbook) =====
+const DATA = {
+ &quot;target&quot;: &quot;Snap-on Incorporated (NYSE: SNA)&quot;,
+ &quot;subtitle&quot;: &quot;In-class demonstration. Illinois Tool Works, all cash, 15% premium&quot;,
+ &quot;data_date&quot;: &quot;October 30, 2026&quot;,
+ &quot;team&quot;: &quot;Demonstration&quot;,
+ &quot;members&quot;: &quot;Worked in class&quot;,
+ &quot;course&quot;: &quot;FNBSLW 444, Fall 2026, UW-Whitewater&quot;,
+ &quot;proj_note&quot;: &quot;Demonstration assumptions: 3% sales growth, 26% operating margin, 2.5% terminal growth.&quot;,
+ &quot;tg&quot;: 0.025,
+ &quot;tax&quot;: 0.21,
+ &quot;price&quot;: 357.88,
+ &quot;value_wacc&quot;: 376.55,
+ &quot;value_apv&quot;: 374.51,
+ &quot;wacc&quot;: 8.12,
+ &quot;r0&quot;: 8.23,
+ &quot;rs&quot;: 8.35,
+ &quot;rb&quot;: 5.73,
+ &quot;dv&quot;: 5.93,
+ &quot;offer&quot;: 411.56,
+ &quot;max_price&quot;: 427.74,
+ &quot;max_prem&quot;: 19.5,
+ &quot;pv_syn&quot;: 3653.0,
+ &quot;npv_deal&quot;: 846.0,
+ &quot;to_target&quot;: 76.8,
+ &quot;exp_npv&quot;: 312.0,
+ &quot;exp_gain&quot;: 2.41,
+ &quot;shares&quot;: 52.29,
+ &quot;cash&quot;: 1100.0,
+ &quot;debt&quot;: 1180.0,
+ &quot;equity_mv&quot;: 18714.0,
+ &quot;ev&quot;: 19770.0,
+ &quot;tv&quot;: 22421.0,
+ &quot;beta&quot;: 0.95,
+ &quot;rf&quot;: 4.16,
+ &quot;erp&quot;: 4.41,
+ &quot;fcf&quot;: [
+  1093.0,
+  1126.0,
+  1159.0,
+  1194.0,
+  1230.0
+ ],
+ &quot;sens&quot;: {
+  &quot;24&quot;: [
+   423.58,
+   347.84,
+   294.97
+  ],
+  &quot;26&quot;: [
+   458.52,
+   376.55,
+   319.34
+  ],
+  &quot;28&quot;: [
+   493.46,
+   405.27,
+   343.71
+  ]
+ }
+};
+// ===================================================================================================
+const $=s=&gt;document.querySelector(s);
+const f2=x=&gt;Number(x).toLocaleString(&#x27;en-US&#x27;,{minimumFractionDigits:2,maximumFractionDigits:2});
+const f0=x=&gt;Number(x).toLocaleString(&#x27;en-US&#x27;,{maximumFractionDigits:0});
+const D$=x=&gt;&#x27;$&#x27;+f2(x), M$=x=&gt;(x&lt;0?&#x27;-$&#x27;:&#x27;$&#x27;)+f0(Math.abs(x))+&#x27;M&#x27;, P=x=&gt;Number(x).toFixed(2)+&#x27;%&#x27;;
+(function(){const miss=[];const need=[&quot;price&quot;,&quot;value_wacc&quot;,&quot;value_apv&quot;,&quot;wacc&quot;,&quot;r0&quot;,&quot;rs&quot;,&quot;rb&quot;,&quot;dv&quot;,&quot;offer&quot;,&quot;max_price&quot;,&quot;max_prem&quot;,&quot;pv_syn&quot;,&quot;npv_deal&quot;,&quot;to_target&quot;,&quot;exp_npv&quot;,&quot;exp_gain&quot;,&quot;shares&quot;,&quot;cash&quot;,&quot;debt&quot;,&quot;equity_mv&quot;,&quot;ev&quot;,&quot;tv&quot;,&quot;beta&quot;,&quot;rf&quot;,&quot;erp&quot;,&quot;tax&quot;];
+ need.forEach(k=&gt;{if(DATA[k]===null||DATA[k]===undefined||isNaN(DATA[k])){miss.push(k);DATA[k]=0;}});
+ DATA.fcf=(DATA.fcf||[]).map((v,i)=&gt;{if(v===null||isNaN(v)){miss.push(&#x27;fcf[&#x27;+(i+1)+&#x27;]&#x27;);return 0;}return v;});
+ Object.keys(DATA.sens||{}).forEach(m=&gt;{DATA.sens[m]=DATA.sens[m].map((v,i)=&gt;{if(v===null||isNaN(v)){miss.push(&#x27;sens&#x27;);return 0;}return v;});});
+ if(miss.length){const w=document.createElement(&#x27;div&#x27;);w.className=&#x27;warn&#x27;;
+  w.textContent=&#x27;Still to fill in (showing 0): &#x27;+[...new Set(miss)].join(&#x27;, &#x27;)+&#x27;. Edit the DATA block at the top of this file.&#x27;;
+  $(&#x27;.wrap&#x27;).insertBefore(w,$(&#x27;header&#x27;).nextSibling);}})();
+
+const T=DATA.tax, G=DATA.tg;
+const BD={
+ price:()=&gt;({t:&#x27;Market price&#x27;,v:D$(DATA.price),f:&#x27;Market price per share on the data date&#x27;,
+  r:[[&#x27;Shares outstanding&#x27;,f2(DATA.shares)+&#x27;M&#x27;],[&#x27;Market value of equity&#x27;,M$(DATA.equity_mv)]],
+  m:&#x27;What one share costs today. Everything else on this dashboard is measured against it.&#x27;}),
+ value_wacc:()=&gt;({t:&#x27;Value per share, WACC method&#x27;,v:D$(DATA.value_wacc),
+  f:&#x27;Equity value = Enterprise value + cash − market value of debt, then divided by shares&#x27;,
+  r:[[&#x27;Enterprise value&#x27;,M$(DATA.ev)],[&#x27;Cash&#x27;,M$(DATA.cash)],[&#x27;Market value of debt&#x27;,M$(DATA.debt)],
+     [&#x27;Equity value&#x27;,M$(DATA.ev+DATA.cash-DATA.debt)],[&#x27;Shares outstanding&#x27;,f2(DATA.shares)+&#x27;M&#x27;]],
+  a:&#x27;(&#x27;+f0(DATA.ev)+&#x27; + &#x27;+f0(DATA.cash)+&#x27; − &#x27;+f0(DATA.debt)+&#x27;) ÷ &#x27;+f2(DATA.shares)+&#x27; = &#x27;+D$(DATA.value_wacc),
+  m:&#x27;Our estimate of what one share is worth, discounting the whole firm at the WACC.&#x27;}),
+ value_apv:()=&gt;({t:&#x27;Value per share, APV&#x27;,v:D$(DATA.value_apv),
+  f:&#x27;Unlevered value + tax shield + cash − debt, divided by shares&#x27;,
+  r:[[&#x27;Discount rate used, R_0&#x27;,P(DATA.r0)],[&#x27;Tax shield, T × B&#x27;,M$(T*DATA.debt)],[&#x27;WACC-method answer&#x27;,D$(DATA.value_wacc)],
+     [&#x27;Difference&#x27;,D$(DATA.value_wacc-DATA.value_apv)]],
+  m:&#x27;The same cash flows valued without leverage, with the tax shield added back separately. The small gap comes from how each method treats future debt.&#x27;}),
+ wacc:()=&gt;({t:&#x27;WACC&#x27;,v:P(DATA.wacc),f:&#x27;WACC = S/V × R_S + B/V × R_B × (1 − T)&#x27;,
+  r:[[&#x27;Cost of equity, R_S&#x27;,P(DATA.rs)],[&#x27;Pre-tax cost of debt, R_B&#x27;,P(DATA.rb)],[&#x27;After-tax cost of debt&#x27;,P(DATA.rb*(1-T))],
+     [&#x27;Weight of debt, B/V&#x27;,Number(DATA.dv).toFixed(2)+&#x27;%&#x27;],[&#x27;Weight of equity, S/V&#x27;,(100-DATA.dv).toFixed(2)+&#x27;%&#x27;]],
+  a:((100-DATA.dv)/100).toFixed(4)+&#x27; × &#x27;+P(DATA.rs)+&#x27; + &#x27;+(DATA.dv/100).toFixed(4)+&#x27; × &#x27;+P(DATA.rb*(1-T))+&#x27; = &#x27;+P(DATA.wacc),
+  m:&#x27;The blended return the firm must earn on everything it does. It sits below R_0 because interest is tax deductible.&#x27;}),
+ r0:()=&gt;({t:&#x27;Unlevered cost of capital, R_0&#x27;,v:P(DATA.r0),
+  f:&#x27;R_S = R_0 + (B/S)(1 − T)(R_0 − R_B), solved backward for R_0&#x27;,
+  r:[[&#x27;Cost of equity, R_S&#x27;,P(DATA.rs)],[&#x27;Pre-tax cost of debt, R_B&#x27;,P(DATA.rb)],[&#x27;Tax rate&#x27;,(T*100).toFixed(0)+&#x27;%&#x27;],[&#x27;WACC&#x27;,P(DATA.wacc)],
+     [&#x27;Gap, R_0 − WACC&#x27;,(DATA.r0-DATA.wacc).toFixed(2)+&#x27; pts&#x27;]],
+  m:&#x27;What the business would cost to finance with no debt at all. This is pure business risk, and the gap to the WACC is the tax shield.&#x27;}),
+ rs:()=&gt;({t:&#x27;Cost of equity, R_S&#x27;,v:P(DATA.rs),f:&#x27;R_S = R_f + beta × equity risk premium&#x27;,
+  r:[[&#x27;Risk-free rate, R_f&#x27;,P(DATA.rf)],[&#x27;Equity beta&#x27;,f2(DATA.beta)],[&#x27;Equity risk premium&#x27;,P(DATA.erp)]],
+  a:P(DATA.rf)+&#x27; + &#x27;+f2(DATA.beta)+&#x27; × &#x27;+P(DATA.erp)+&#x27; = &#x27;+P(DATA.rs),
+  m:&#x27;What shareholders require, given that the firm already carries debt.&#x27;}),
+ exp_npv:()=&gt;({t:&#x27;Expansion NPV&#x27;,v:M$(DATA.exp_npv),f:&#x27;NPV = after-tax perpetual earnings ÷ R_0 − cost&#x27;,
+  r:[[&#x27;Discount rate, R_0&#x27;,P(DATA.r0)],[&#x27;Debt financing advantage&#x27;,D$(DATA.exp_gain)+&#x27; per share&#x27;]],
+  m:&#x27;The project is valued at R_0 because it is judged before its financing is chosen. Financing it with debt adds the tax shield on top.&#x27;}),
+ offer:()=&gt;({t:&#x27;Offer price&#x27;,v:D$(DATA.offer),f:&#x27;Offer = market price × (1 + premium)&#x27;,
+  r:[[&#x27;Market price&#x27;,D$(DATA.price)],[&#x27;Premium&#x27;,((DATA.offer/DATA.price-1)*100).toFixed(1)+&#x27;%&#x27;],
+     [&#x27;Total cost of the equity&#x27;,M$(DATA.offer*DATA.shares)],[&#x27;Premium paid to target holders&#x27;,M$((DATA.offer-DATA.price)*DATA.shares)]],
+  m:&#x27;What the acquirer proposes to pay. Everything above the market price is a transfer to the target’s shareholders.&#x27;}),
+ max_price:()=&gt;({t:&#x27;Maximum price to the acquirer&#x27;,v:D$(DATA.max_price),
+  f:&#x27;(target standalone equity + PV of synergies) ÷ shares&#x27;,
+  r:[[&#x27;Target standalone equity&#x27;,M$(DATA.equity_mv)],[&#x27;PV of synergies&#x27;,M$(DATA.pv_syn)],
+     [&#x27;Value to the acquirer&#x27;,M$(DATA.equity_mv+DATA.pv_syn)],[&#x27;Maximum premium&#x27;,Number(DATA.max_prem).toFixed(1)+&#x27;%&#x27;],
+     [&#x27;Offer on the table&#x27;,D$(DATA.offer)]],
+  m:&#x27;The ceiling. Pay more than this and the acquirer hands its own shareholders’ money to the target.&#x27;}),
+ pv_syn:()=&gt;({t:&#x27;PV of synergies&#x27;,v:M$(DATA.pv_syn),f:&#x27;PV = after-tax synergy in year 1 ÷ (WACC − g)&#x27;,
+  r:[[&#x27;Discount rate, WACC&#x27;,P(DATA.wacc)],[&#x27;Terminal growth, g&#x27;,P(G*100)],
+     [&#x27;Share handed to the target&#x27;,Number(DATA.to_target).toFixed(1)+&#x27;%&#x27;]],
+  m:&#x27;The whole case for the deal. It is a perpetuity, so it assumes the savings are permanent and start immediately.&#x27;}),
+ npv_deal:()=&gt;({t:&#x27;NPV of the deal&#x27;,v:M$(DATA.npv_deal),f:&#x27;NPV = (maximum price − offer price) × shares&#x27;,
+  r:[[&#x27;Maximum price&#x27;,D$(DATA.max_price)],[&#x27;Offer price&#x27;,D$(DATA.offer)],[&#x27;Difference per share&#x27;,D$(DATA.max_price-DATA.offer)],
+     [&#x27;Shares&#x27;,f2(DATA.shares)+&#x27;M&#x27;],[&#x27;Synergy value kept by the acquirer&#x27;,(100-DATA.to_target).toFixed(1)+&#x27;%&#x27;]],
+  m:&#x27;What is left for the acquirer’s own shareholders once the premium is paid. The thinner this is, the less room there is for the synergies to disappoint.&#x27;}),
+ to_target:()=&gt;({t:&#x27;Synergy value paid away&#x27;,v:Number(DATA.to_target).toFixed(1)+&#x27;%&#x27;,
+  f:&#x27;Premium paid ÷ PV of synergies&#x27;,
+  r:[[&#x27;Premium paid&#x27;,M$((DATA.offer-DATA.price)*DATA.shares)],[&#x27;PV of synergies&#x27;,M$(DATA.pv_syn)],
+     [&#x27;Kept by the acquirer&#x27;,(100-DATA.to_target).toFixed(1)+&#x27;%&#x27;]],
+  m:&#x27;Target shareholders get their share up front and with certainty. The acquirer keeps the rest and carries all the execution risk.&#x27;}),
+ verdict:()=&gt;({t:&#x27;Valuation verdict&#x27;,v:(DATA.value_wacc&gt;DATA.price?&#x27;Cheap&#x27;:&#x27;Expensive&#x27;),
+  f:&#x27;Our value per share against the market price&#x27;,
+  r:[[&#x27;Our value, WACC method&#x27;,D$(DATA.value_wacc)],[&#x27;Market price&#x27;,D$(DATA.price)],
+     [&#x27;Difference&#x27;,((DATA.value_wacc/DATA.price-1)*100).toFixed(1)+&#x27;%&#x27;]],
+  m:&#x27;For the market to be right instead of us, investors must be using a higher discount rate or a lower long-run margin than the case assumes.&#x27;})
+};
+function cell(k){const d=BD[k](); let h=&#x27;&lt;button class=&quot;cls&quot; onclick=&quot;close_()&quot;&gt;Close&lt;/button&gt;&lt;h3&gt;&#x27;+d.t+&#x27;&lt;/h3&gt;&lt;div class=&quot;big&quot;&gt;&#x27;+d.v+&#x27;&lt;/div&gt;&#x27;;
+ h+=&#x27;&lt;div class=&quot;sec&quot;&gt;How it is built&lt;/div&gt;&lt;div class=&quot;f&quot;&gt;&#x27;+d.f+&#x27;&lt;/div&gt;&#x27;;
+ if(d.r&amp;&amp;d.r.length){h+=&#x27;&lt;div class=&quot;sec&quot;&gt;Inputs&lt;/div&gt;&lt;table&gt;&#x27;+d.r.map(x=&gt;&#x27;&lt;tr&gt;&lt;td&gt;&#x27;+x[0]+&#x27;&lt;/td&gt;&lt;td&gt;&#x27;+x[1]+&#x27;&lt;/td&gt;&lt;/tr&gt;&#x27;).join(&#x27;&#x27;)+&#x27;&lt;/table&gt;&#x27;;}
+ if(d.a){h+=&#x27;&lt;div class=&quot;sec&quot;&gt;The arithmetic&lt;/div&gt;&lt;div class=&quot;f&quot;&gt;&#x27;+d.a+&#x27;&lt;/div&gt;&#x27;;}
+ h+=&#x27;&lt;div class=&quot;sec&quot;&gt;What it means&lt;/div&gt;&lt;div class=&quot;mean&quot;&gt;&#x27;+d.m+&#x27;&lt;/div&gt;&#x27;;
+ $(&#x27;#pan&#x27;).innerHTML=h;$(&#x27;#ov&#x27;).classList.add(&#x27;on&#x27;);}
+function show(title,formula,rows,arith,mean,big){BD.__tmp=()=&gt;({t:title,v:big,f:formula,r:rows,a:arith,m:mean});cell(&#x27;__tmp&#x27;);}
+function close_(){$(&#x27;#ov&#x27;).classList.remove(&#x27;on&#x27;);}
+$(&#x27;#ov&#x27;).addEventListener(&#x27;click&#x27;,e=&gt;{if(e.target.id===&#x27;ov&#x27;)close_();});
+document.addEventListener(&#x27;keydown&#x27;,e=&gt;{if(e.key===&#x27;Escape&#x27;)close_();});
+
+$(&#x27;#ttl&#x27;).childNodes[0].textContent=DATA.target;
+$(&#x27;#sub&#x27;).textContent=DATA.subtitle+&#x27;  ·  Data date &#x27;+DATA.data_date;
+const ok=DATA.npv_deal&gt;0;$(&#x27;#rat&#x27;).textContent=ok?&#x27;PROCEED&#x27;:&#x27;WALK AWAY&#x27;;if(!ok)$(&#x27;#rat&#x27;).classList.add(&#x27;walk&#x27;);
+$(&#x27;#ratn&#x27;).textContent=&#x27;Offer &#x27;+D$(DATA.offer)+&#x27; against a ceiling of &#x27;+D$(DATA.max_price)+&#x27; (&#x27;+Number(DATA.max_prem).toFixed(1)+&#x27;% maximum premium)&#x27;;
+
+const TILES=[[&#x27;price&#x27;,&#x27;Market price&#x27;,D$(DATA.price),&#x27;per share, data date&#x27;],
+ [&#x27;value_wacc&#x27;,&#x27;Our value per share&#x27;,D$(DATA.value_wacc),&#x27;APV &#x27;+D$(DATA.value_apv)],
+ [&#x27;wacc&#x27;,&#x27;WACC&#x27;,P(DATA.wacc),&#x27;R_0 &#x27;+P(DATA.r0)+&#x27;, debt &#x27;+Number(DATA.dv).toFixed(1)+&#x27;% of value&#x27;],
+ [&#x27;verdict&#x27;,&#x27;Verdict&#x27;,(DATA.value_wacc&gt;DATA.price?&#x27;CHEAP&#x27;:&#x27;EXPENSIVE&#x27;),((DATA.value_wacc/DATA.price-1)*100).toFixed(1)+&#x27;% against the market&#x27;],
+ [&#x27;offer&#x27;,&#x27;Offer price&#x27;,D$(DATA.offer),&#x27;premium &#x27;+((DATA.offer/DATA.price-1)*100).toFixed(0)+&#x27;%&#x27;],
+ [&#x27;max_price&#x27;,&#x27;Maximum price&#x27;,D$(DATA.max_price),&#x27;ceiling premium &#x27;+Number(DATA.max_prem).toFixed(1)+&#x27;%&#x27;],
+ [&#x27;pv_syn&#x27;,&#x27;PV of synergies&#x27;,M$(DATA.pv_syn),Number(DATA.to_target).toFixed(0)+&#x27;% paid away in the premium&#x27;],
+ [&#x27;npv_deal&#x27;,&#x27;Deal NPV&#x27;,M$(DATA.npv_deal),&#x27;expansion NPV &#x27;+M$(DATA.exp_npv)]];
+$(&#x27;#tiles&#x27;).innerHTML=TILES.map(t=&gt;&#x27;&lt;button class=&quot;tile&quot; onclick=&quot;cell(\&#x27;&#x27;+t[0]+&#x27;\&#x27;)&quot;&gt;&lt;div class=&quot;l&quot;&gt;&#x27;+t[1]+&#x27;&lt;/div&gt;&lt;div class=&quot;v&quot;&gt;&#x27;+t[2]+&#x27;&lt;/div&gt;&lt;div class=&quot;s&quot;&gt;&#x27;+t[3]+&#x27;&lt;/div&gt;&lt;/button&gt;&#x27;).join(&#x27;&#x27;);
+
+(function(){const items=[[&#x27;APV&#x27;,DATA.value_apv,&#x27;bar&#x27;,&#x27;value_apv&#x27;],[&#x27;Our value&#x27;,DATA.value_wacc,&#x27;bar&#x27;,&#x27;value_wacc&#x27;],
+ [&#x27;Market price&#x27;,DATA.price,&#x27;bar&#x27;,&#x27;price&#x27;],[&#x27;Offer&#x27;,DATA.offer,&#x27;bar2&#x27;,&#x27;offer&#x27;],[&#x27;Maximum price&#x27;,DATA.max_price,&#x27;bar2&#x27;,&#x27;max_price&#x27;]];
+ const W=470,H=196,L=104,max=Math.max(...items.map(i=&gt;i[1]))*1.16,bh=25,g=10;
+ let s=&#x27;&lt;svg viewBox=&quot;0 0 &#x27;+W+&#x27; &#x27;+H+&#x27;&quot; role=&quot;img&quot; aria-label=&quot;Value per share&quot;&gt;&#x27;;
+ items.forEach((it,i)=&gt;{const y=12+i*(bh+g),w=(W-L-62)*it[1]/max;
+  s+=&#x27;&lt;text class=&quot;lbl&quot; x=&quot;&#x27;+(L-6)+&#x27;&quot; y=&quot;&#x27;+(y+bh/2+4)+&#x27;&quot; text-anchor=&quot;end&quot;&gt;&#x27;+it[0]+&#x27;&lt;/text&gt;&#x27;+
+     &#x27;&lt;rect class=&quot;&#x27;+it[2]+&#x27;&quot; x=&quot;&#x27;+L+&#x27;&quot; y=&quot;&#x27;+y+&#x27;&quot; width=&quot;&#x27;+w+&#x27;&quot; height=&quot;&#x27;+bh+&#x27;&quot; rx=&quot;4&quot; onclick=&quot;cell(\&#x27;&#x27;+it[3]+&#x27;\&#x27;)&quot;&gt;&lt;title&gt;Click for the breakdown&lt;/title&gt;&lt;/rect&gt;&#x27;+
+     &#x27;&lt;text class=&quot;val&quot; x=&quot;&#x27;+(L+w+6)+&#x27;&quot; y=&quot;&#x27;+(y+bh/2+4)+&#x27;&quot;&gt;&#x27;+D$(it[1])+&#x27;&lt;/text&gt;&#x27;;});
+ s+=&#x27;&lt;line class=&quot;axis&quot; x1=&quot;&#x27;+L+&#x27;&quot; y1=&quot;8&quot; x2=&quot;&#x27;+L+&#x27;&quot; y2=&quot;&#x27;+(H-4)+&#x27;&quot;/&gt;&lt;/svg&gt;&#x27;;$(&#x27;#c1&#x27;).innerHTML=s;})();
+
+(function(){const v=DATA.fcf,W=300,H=196,L=34,B=27,max=Math.max(...v)*1.22,cw=(W-L-10)/v.length;
+ let s=&#x27;&lt;svg viewBox=&quot;0 0 &#x27;+W+&#x27; &#x27;+H+&#x27;&quot; role=&quot;img&quot; aria-label=&quot;Cash flow from assets&quot;&gt;&#x27;;
+ v.forEach((x,i)=&gt;{const h=(H-B-16)*x/max,xx=L+i*cw+6,y=H-B-h;
+  s+=&#x27;&lt;rect class=&quot;bar&quot; x=&quot;&#x27;+xx+&#x27;&quot; y=&quot;&#x27;+y+&#x27;&quot; width=&quot;&#x27;+(cw-12)+&#x27;&quot; height=&quot;&#x27;+h+&#x27;&quot; rx=&quot;4&quot; onclick=&quot;fcf(&#x27;+i+&#x27;)&quot;&gt;&lt;title&gt;Click for the breakdown&lt;/title&gt;&lt;/rect&gt;&#x27;+
+     &#x27;&lt;text class=&quot;val&quot; x=&quot;&#x27;+(xx+(cw-12)/2)+&#x27;&quot; y=&quot;&#x27;+(y-4)+&#x27;&quot; text-anchor=&quot;middle&quot;&gt;&#x27;+f0(x)+&#x27;&lt;/text&gt;&#x27;+
+     &#x27;&lt;text class=&quot;lbl&quot; x=&quot;&#x27;+(xx+(cw-12)/2)+&#x27;&quot; y=&quot;&#x27;+(H-B+14)+&#x27;&quot; text-anchor=&quot;middle&quot;&gt;Yr &#x27;+(i+1)+&#x27;&lt;/text&gt;&#x27;;});
+ s+=&#x27;&lt;line class=&quot;axis&quot; x1=&quot;&#x27;+L+&#x27;&quot; y1=&quot;&#x27;+(H-B)+&#x27;&quot; x2=&quot;&#x27;+(W-6)+&#x27;&quot; y2=&quot;&#x27;+(H-B)+&#x27;&quot;/&gt;&lt;/svg&gt;&#x27;;$(&#x27;#c2&#x27;).innerHTML=s;})();
+function fcf(i){show(&#x27;Cash flow from assets, year &#x27;+(i+1),
+ &#x27;EBIT × (1 − T) + D&amp;A − CapEx − change in net working capital&#x27;,
+ [[&#x27;This year&#x27;,M$(DATA.fcf[i])],[&#x27;Growth on the prior year&#x27;,i===0?&#x27;from the base year&#x27;:((DATA.fcf[i]/DATA.fcf[i-1]-1)*100).toFixed(1)+&#x27;%&#x27;],
+  [&#x27;Year 5 flow&#x27;,M$(DATA.fcf[4])],[&#x27;Terminal value at year 5&#x27;,M$(DATA.tv)]],null,
+ &#x27;This is the cash the business can hand to everyone who financed it, after tax and after reinvestment. The terminal value stands for every year after year 5.&#x27;,
+ M$(DATA.fcf[i]));}
+
+(function(){const cols=[&#x27;WACC − 1 pt&#x27;,&#x27;WACC&#x27;,&#x27;WACC + 1 pt&#x27;];
+ let s=&#x27;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Margin&lt;/th&gt;&#x27;+cols.map(c=&gt;&#x27;&lt;th&gt;&#x27;+c+&#x27;&lt;/th&gt;&#x27;).join(&#x27;&#x27;)+&#x27;&lt;/tr&gt;&#x27;;
+ Object.keys(DATA.sens).forEach(k=&gt;{s+=&#x27;&lt;tr&gt;&lt;td&gt;&#x27;+k+&#x27;%&lt;/td&gt;&#x27;+DATA.sens[k].map((v,i)=&gt;
+  &#x27;&lt;td class=&quot;s&quot; style=&quot;background:&#x27;+(v&gt;=DATA.price?&#x27;#e6f2ee&#x27;:&#x27;#f7f5fa&#x27;)+&#x27;&quot; onclick=&quot;sens(\&#x27;&#x27;+k+&#x27;\&#x27;,&#x27;+i+&#x27;)&quot;&gt;&#x27;+D$(v)+&#x27;&lt;/td&gt;&#x27;).join(&#x27;&#x27;)+&#x27;&lt;/tr&gt;&#x27;;});
+ s+=&#x27;&lt;/table&gt;&#x27;;$(&#x27;#c3&#x27;).innerHTML=s;})();
+function sens(m,i){const v=DATA.sens[m][i],lbl=[&#x27;one point below our WACC&#x27;,&#x27;our WACC&#x27;,&#x27;one point above our WACC&#x27;][i];
+ show(&#x27;Value per share at a &#x27;+m+&#x27;% margin&#x27;,
+  &#x27;The same five-year model, rerun with this operating margin and this discount rate&#x27;,
+  [[&#x27;Operating margin&#x27;,m+&#x27;%&#x27;],[&#x27;Discount rate&#x27;,lbl],[&#x27;Value per share&#x27;,D$(v)],[&#x27;Market price&#x27;,D$(DATA.price)],
+   [&#x27;Against the market&#x27;,((v/DATA.price-1)*100).toFixed(1)+&#x27;%&#x27;]],null,
+  (v&gt;=DATA.price?&#x27;At these assumptions the shares are worth at least what the market is charging.&#x27;:&#x27;At these assumptions the market price is too high, so this combination is what a bearish investor would be assuming.&#x27;),
+  D$(v));}
+
+$(&#x27;#c2n&#x27;).textContent=DATA.proj_note||&#x27;&#x27;;
+$(&#x27;#f1&#x27;).textContent=DATA.team+&#x27;  ·  &#x27;+DATA.members+&#x27;  ·  &#x27;+DATA.course;
+$(&#x27;#f2&#x27;).textContent=&#x27;Sources: SEC filings, FINRA, home.treasury.gov, Damodaran. Student coursework, not investment advice.&#x27;;
+&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;
+"></iframe></div>
+<p style="font-size:14px;color:var(--mut)">Built on Snap-on, the company we work through together in class. Your own dashboard uses the blank template posted in CANVAS, with your figures from the Dashboard Data sheet of your workbook.</p>
+</section>
+
+<section id="formulas"><h2>Formulas you will need</h2>
+<p class="sub">All of them. There is nothing else hidden in the case.</p>
+<div class="card">
+<h3 style="margin-top:0">Cost of capital</h3>
+<div class="f">R_S = R_f + beta (R_M &minus; R_f)</div>
+<div class="f">WACC = [S / (B + S)] R_S + [B / (B + S)] R_B (1 &minus; T)</div>
+<div class="f">R_S = R_0 + (B/S)(1 &minus; T)(R_0 &minus; R_B)&nbsp;&nbsp;&nbsp;solve backward for R_0</div>
+<h3>The expansion</h3>
+<div class="f">PV = EBIT (1 &minus; T) / R_0&nbsp;&nbsp;&nbsp;&nbsp;V_L = V_U + T &times; B</div>
+<h3>Valuation</h3>
+<div class="f">Cash flow from assets = EBIT (1 &minus; T) + D&amp;A &minus; CapEx &minus; change in NWC</div>
+<div class="f">Terminal value at year 5 = CFA&#8325; (1 + g) / (WACC &minus; g)</div>
+<div class="f">Equity value = Enterprise value + cash &minus; market value of debt</div>
+<div class="f">APV: unlevered value at R_0, then add T &times; B</div>
+<h3>The deal</h3>
+<div class="f">PV of synergies = after-tax synergy / (WACC &minus; g)</div>
+<div class="f">Maximum price per share = (target equity + PV of synergies) / shares</div>
+<div class="f">Deal NPV = (maximum price &minus; offer price) &times; shares</div>
+</div>
+</section>
+</main>
+<footer><div class="in"><span>FNBSLW 444 &middot; Fall 2026 &middot; University of Wisconsin-Whitewater</span>
+<span>Showaib Sarker, Ph.D. &middot; sarkerm@uww.edu &middot; Hyland Hall 3520</span></div></footer>
+<script>function tg(e){e.classList.toggle('open');}</script>
+</body></html>
